@@ -104,11 +104,11 @@ export const useChatStore = create<ChatState>()(
       setLoading: (v) => set({ isLoading: v }),
 
       // ── Preferences ──────────────────────────────────────────────────────
-      darkMode: false,
+      darkMode: true,
       toggleDarkMode: () => set((s) => ({ darkMode: !s.darkMode })),
     }),
     {
-      name:    'curalink-v2',
+      name:    'curalink-v1',
       storage: createJSONStorage(() => localStorage),
       // Only persist messages, session, and dark mode preference.
       // Streaming state is always ephemeral.

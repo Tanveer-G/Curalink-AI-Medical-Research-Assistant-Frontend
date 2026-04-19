@@ -129,7 +129,7 @@ The frontend is a static site and can be deployed to any static hosting provider
 4. Add the environment variable `VITE_API_URL` pointing to your deployed backend.
 5. Click **"Deploy"**.
 
-Your app will be live at `https://curalink.vercel.app`.
+Your app will be live at `https://curalink-search.vercel.app`.
 
 ---
 
@@ -144,7 +144,7 @@ It was generated using the following prompt:
 
 ## 👤 Author
 
-**Your Name**  
+**Tanveer H.**  
 [GitHub](https://github.com/tanveer-g) · [LinkedIn](https://linkedin.com/in/tanveer-h1)
 
 ---
