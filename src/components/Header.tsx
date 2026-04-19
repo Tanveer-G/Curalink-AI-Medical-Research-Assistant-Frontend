@@ -1,4 +1,4 @@
-import { Moon, Sun, Trash2, Wifi } from 'lucide-react';
+import { Moon, Sun, Trash2, Wifi, Github, Linkedin, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LogoLockup } from './Logo';
 import { Button } from './ui/button';
@@ -65,23 +65,82 @@ export function Header() {
 
         {/* Right: actions */}
         <div className="flex items-center gap-1">
+          {/* GitHub */}
+          <Tooltip label="GitHub Repository">
+            <Button
+              variant="ghost"
+              size="icon"
+              // asChild
+              className="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
+            >
+              <a
+                href="https://github.com/Tanveer-G/Curalink-AI-Medical-Research-Assistant-Backend"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View source on GitHub"
+              >
+                <Github size={16} aria-hidden="true" />
+              </a>
+            </Button>
+          </Tooltip>
+
+          {/* LinkedIn */}
+          <Tooltip label="LinkedIn Profile">
+            <Button
+              variant="ghost"
+              size="icon"
+              // asChild
+              className="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
+            >
+              <a
+                href="https://linkedin.com/in/tanveer-h1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect on LinkedIn"
+              >
+                <Linkedin size={16} aria-hidden="true" />
+              </a>
+            </Button>
+          </Tooltip>
+
+          {/* Portfolio (optional – uncomment to enable) */}
+          
+          <Tooltip label="Portfolio Website" >
+            <Button
+              variant="ghost"
+              size="icon"
+              // asChild
+              className="hidden md:block text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
+            >
+              <a
+                href="https://tanveer-portfolio.vercel.app/?utm_source=curalink&utm_medium=header-nav&utm_campaign=website-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit portfolio"
+              >
+                <Globe size={16} aria-hidden="true" />
+              </a>
+            </Button>
+          </Tooltip>
+         
+
           <Tooltip label={darkMode ? 'Light mode' : 'Dark mode'}>
             <Button
-              variant="ghost" size="icon"
+              variant="ghost"
+              size="icon"
               onClick={toggleDarkMode}
               aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
               className="text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200"
             >
-              {darkMode
-                ? <Sun size={16} aria-hidden="true" />
-                : <Moon size={16} aria-hidden="true" />}
+              {darkMode ? <Sun size={16} aria-hidden="true" /> : <Moon size={16} aria-hidden="true" />}
             </Button>
           </Tooltip>
 
           {hasMessages && (
             <Tooltip label="Clear conversation">
               <Button
-                variant="ghost" size="icon"
+                variant="ghost"
+                size="icon"
                 onClick={handleClear}
                 aria-label="Clear conversation"
                 className="text-slate-400 hover:text-red-600 dark:hover:text-red-400"
